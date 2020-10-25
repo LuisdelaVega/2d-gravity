@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Controls.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Controls/Controls.inputactions'
 
 using System;
 using System.Collections;
@@ -19,9 +19,17 @@ public class @Controls : IInputActionCollection, IDisposable
             ""id"": ""e175893a-425e-4967-8847-33721e86965c"",
             ""actions"": [
                 {
-                    ""name"": ""Movement"",
-                    ""type"": ""PassThrough"",
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
                     ""id"": ""1a478a23-4e0a-4781-bd71-59fc525ec050"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Land"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""c05d5515-3316-4974-b07d-c21e4f7d0b52"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -29,114 +37,81 @@ public class @Controls : IInputActionCollection, IDisposable
             ],
             ""bindings"": [
                 {
-                    ""name"": ""2D Vector"",
-                    ""id"": ""1f544666-d0fe-4edd-811e-cf212f569c5f"",
-                    ""path"": ""2DVector"",
+                    ""name"": """",
+                    ""id"": ""fcc89a60-befc-403c-bf8e-6f5206102ff6"",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": true,
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""up"",
-                    ""id"": ""87b45943-7f0c-44f1-a632-4cb9cc9cd69a"",
+                    ""name"": """",
+                    ""id"": ""b06ffa53-112c-45fb-a194-a47649ac283d"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Jump"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""86f5b006-1de6-47bc-98aa-28f0d0f2b95a"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""ae31fd97-8e01-49b4-9f3a-999b6157c992"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""7aed2873-a3a3-4194-9526-77fc2e106a11"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""2D Vector"",
-                    ""id"": ""22713656-0fc3-4b3c-a7eb-2adfe6ff82c2"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""up"",
-                    ""id"": ""f5f845fb-ab7f-4580-a921-44e49a6c47bb"",
+                    ""name"": """",
+                    ""id"": ""578180b8-25fe-466a-97a7-b26f561619f1"",
                     ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Jump"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": true
+                    ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""down"",
-                    ""id"": ""c352861e-475d-4c5e-8fa2-783cd2f45fd2"",
+                    ""name"": """",
+                    ""id"": ""56a0cd54-07b8-4296-814e-335d1627421a"",
+                    ""path"": ""<Touchscreen>/primaryTouch/tap"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f58d8b6f-68ed-47ef-918a-5c8d9fdd9d97"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Land"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""da4dacd5-adfb-40ef-b3d2-92276bd22011"",
                     ""path"": ""<Keyboard>/downArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Land"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": true
+                    ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""left"",
-                    ""id"": ""bd8e5305-ff00-4ec3-b5f6-ef97e72a819c"",
-                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""name"": """",
+                    ""id"": ""ebd5a550-faa4-47f3-8083-a9dd02f1f85d"",
+                    ""path"": ""<Touchscreen>/press"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Land"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""be40fb58-f658-4b61-8e87-2b6ac69c9686"",
-                    ""path"": ""<Keyboard>/rightArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -145,7 +120,8 @@ public class @Controls : IInputActionCollection, IDisposable
 }");
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
-        m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
+        m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
+        m_Player_Land = m_Player.FindAction("Land", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -195,12 +171,14 @@ public class @Controls : IInputActionCollection, IDisposable
     // Player
     private readonly InputActionMap m_Player;
     private IPlayerActions m_PlayerActionsCallbackInterface;
-    private readonly InputAction m_Player_Movement;
+    private readonly InputAction m_Player_Jump;
+    private readonly InputAction m_Player_Land;
     public struct PlayerActions
     {
         private @Controls m_Wrapper;
         public PlayerActions(@Controls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Movement => m_Wrapper.m_Player_Movement;
+        public InputAction @Jump => m_Wrapper.m_Player_Jump;
+        public InputAction @Land => m_Wrapper.m_Player_Land;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -210,22 +188,29 @@ public class @Controls : IInputActionCollection, IDisposable
         {
             if (m_Wrapper.m_PlayerActionsCallbackInterface != null)
             {
-                @Movement.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMovement;
-                @Movement.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMovement;
-                @Movement.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMovement;
+                @Jump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
+                @Jump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
+                @Jump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
+                @Land.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLand;
+                @Land.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLand;
+                @Land.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLand;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Movement.started += instance.OnMovement;
-                @Movement.performed += instance.OnMovement;
-                @Movement.canceled += instance.OnMovement;
+                @Jump.started += instance.OnJump;
+                @Jump.performed += instance.OnJump;
+                @Jump.canceled += instance.OnJump;
+                @Land.started += instance.OnLand;
+                @Land.performed += instance.OnLand;
+                @Land.canceled += instance.OnLand;
             }
         }
     }
     public PlayerActions @Player => new PlayerActions(this);
     public interface IPlayerActions
     {
-        void OnMovement(InputAction.CallbackContext context);
+        void OnJump(InputAction.CallbackContext context);
+        void OnLand(InputAction.CallbackContext context);
     }
 }
