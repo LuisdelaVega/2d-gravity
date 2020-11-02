@@ -4,15 +4,16 @@ using UnityEngine;
 public class GravityBody : MonoBehaviour
 {
     [Header("Planet")]
+    public Transform m_transform;
     [SerializeField] private float maxGravity = 10;
     [SerializeField] private float maxGravityDistance = 50;
-    public Transform m_transform;
+    [SerializeField] private bool playerIsInGravityField = false;
 
     [Header("Player")]
+    public Rigidbody2D playerRigidBody;
     public Transform playerTransform;
-    public Rigidbody2D playerRB;
-    private float angle;
-    private readonly float playerRotationSpeed = 100f;
+    //private float angle;
+    //private readonly float playerRotationSpeed = 100f;
 
     [Header("Line Renderer")]
     public LineRenderer lineRenderer;
@@ -36,13 +37,33 @@ public class GravityBody : MonoBehaviour
         float distance = Vector2.Distance(m_transform.position, playerTransform.position);
 
         if (distance > maxGravityDistance) return;
-        onEnteredGravity?.Invoke(m_transform);
+
+        if (!playerIsInGravityField)
+            onEnteredGravity?.Invoke(m_transform);
 
         Vector3 v = m_transform.position - playerTransform.position;
-        playerRB.AddForce(v.normalized * (1.0f - distance / maxGravityDistance) * maxGravity);
+        playerRigidBody.AddForce(v.normalized * (1.0f - distance / maxGravityDistance) * maxGravity);
 
-        angle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg;
-        playerTransform.rotation = Quaternion.Slerp(playerTransform.rotation, Quaternion.AngleAxis(angle + 90, Vector3.forward), playerRotationSpeed * Time.deltaTime);
+        //angle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg;
+        //playerTransform.rotation = Quaternion.Slerp(playerTransform.rotation, Quaternion.AngleAxis(angle + 90, Vector3.forward), playerRotationSpeed * Time.deltaTime);
+    }
+
+    private void OnEnable()
+    {
+        onEnteredGravity += onEnteredGravityHandler;
+    }
+
+    private void OnDisable()
+    {
+        onEnteredGravity -= onEnteredGravityHandler;
+    }
+
+    private void onEnteredGravityHandler(Transform planetTransform)
+    {
+        if (planetTransform.Equals(m_transform))
+            playerIsInGravityField = true;
+        else
+            playerIsInGravityField = false;
     }
 
     private void SetupCircle()

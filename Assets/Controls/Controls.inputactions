@@ -14,10 +14,10 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Land",
+                    "name": "Move",
                     "type": "PassThrough",
-                    "id": "c05d5515-3316-4974-b07d-c21e4f7d0b52",
-                    "expectedControlType": "Button",
+                    "id": "df5dce4b-fb0b-4e10-a959-60424e59fc18",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
                 }
@@ -68,37 +68,59 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "f58d8b6f-68ed-47ef-918a-5c8d9fdd9d97",
+                    "name": "2D Vector",
+                    "id": "93a49485-37fb-4857-aa3c-ffd60709fdd3",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "5fe7f5ec-e5e9-4933-82dc-d1bd80e3d71e",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "64a87363-2720-4674-b067-89637b0ae04d",
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Land",
+                    "action": "Move",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "da4dacd5-adfb-40ef-b3d2-92276bd22011",
-                    "path": "<Keyboard>/downArrow",
+                    "name": "left",
+                    "id": "ccddc8f0-e19d-4141-af40-bbbbf57afde9",
+                    "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Land",
+                    "action": "Move",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "ebd5a550-faa4-47f3-8083-a9dd02f1f85d",
-                    "path": "<Touchscreen>/press",
+                    "name": "right",
+                    "id": "a4e90ae9-08fb-457b-bb12-dedd0398fef8",
+                    "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Land",
+                    "action": "Move",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
                 }
             ]
         }
